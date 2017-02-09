@@ -1,0 +1,26 @@
+Preencha o formulário:
+
+<hr>
+
+<%= form_tag do %>
+
+  <%= form_for @estagiario do |f| %>
+    Nome: <%= f.text_field :nome %><br/>
+    Matricula: <%= f.text_field :matricula %><br/>
+    <%= f.submit %>
+  <% end %>
+<% end %>
+
+
+
+<hr>
+
+Mostra todas as informações do estagiário:
+<% if !@estagiarios.blank? %>
+  <%for item in @estagiarios %>
+    <%= item.nome %> <%= item.matricula %> <br/>
+  <% end %>
+<% else %>
+
+<% end %>
+  
